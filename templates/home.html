@@ -1,0 +1,201 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+   <!-- Required meta tags -->
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+   <!-- Bootstrap CSS -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Stick+No+Bills:wght@200&display=swap" rel="stylesheet">
+<style>
+body {
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.container {
+  border: 2px solid #dedede;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.darker {
+  border-color: #ccc;
+  background-color: #ddd;
+}
+
+.container::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.container img {
+  float: left;
+  max-width: 60px;
+  width: 100%;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+
+.container img.right {
+  float: right;
+  margin-left: 20px;
+  margin-right:0;
+}
+
+.time-right {
+  float: right;
+  color: #aaa;
+}
+
+.time-left {
+  float: left;
+  color: #999;
+}
+</style>
+<link rel="stylesheet" href="{% static 'homes.css' %}">
+</head>
+<body>
+  {% load static %}
+  <div class="imga"><img src="{% static 'images.png' %}" alt="My image" class="centre">
+  </div>
+  <div align="center" id="head">
+      <h2>FINCHAT</h2>
+  </div>
+<div align="center" id="head">
+  <h2>YOU CAN START INVESTING FOR YOUR DREAM WITH OUR GURUS</h2>
+</div>
+<div class="container">
+    <style>
+    input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    }
+
+    input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    }
+
+    input[type=submit]:hover {
+    background-color: #45a049;
+    }
+
+    div {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    }
+    </style>
+
+    <form id="post-form" method="POST" action="checkview">
+        {% csrf_token %}
+        <label>Room NO</label>
+        <input type="text" name="room_name" id="room_name" width="100px" />
+        <label>Username</label>
+        <input type="text" name="username" id="username" width="100px" />
+        <input type="submit" value="Enter Room">
+    </form>
+</div>
+<div>
+  <table class="table">
+    <thead>
+      <tr  class="table-danger">
+        <th scope="col">#</th>
+        <th scope="col">BITCOIN</th>
+        <th scope="col">CURRENT VALUE</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr  class="table-danger">
+        <th scope="row">1</th>
+        <td> {{ data1.0.0 }}</td> 
+        <td> {{ data1.0.1 }} </td>
+      </tr>
+      <tr  class="table-info">
+        <th scope="row">2</th>
+        <td> {{ data1.1.0 }}</td> 
+      <td> {{ data1.1.1 }} </td>
+      </tr>
+      <tr  class="table-danger">
+        <th scope="row">3</th>
+        <td> {{ data1.2.0 }}</td> 
+        <td> {{ data1.2.1 }} </td>
+      </tr>
+      <tr  class="table-info">
+        <th scope="row">4</th>
+       
+      <td> {{ data1.3.0 }}</td> 
+      <td> {{ data1.3.1 }} </td>
+      </tr>
+      <tr  class="table-danger">
+        <th scope="row">5</th>
+        <td> {{ data1.4.0 }}</td> 
+      <td> {{ data1.4.1 }} </td>
+      </tr>
+      <tr  class="table-info">
+        <th scope="row">6</th>
+        <td> {{ data1.5.0 }}</td> 
+        <td> {{ data1.5.1 }} </td>
+      </tr>
+      <tr  class="table-danger">
+        <th scope="row">7</th>
+        <td> {{ data1.6.0 }}</td> 
+        <td> {{ data1.6.1 }} </td>
+      </tr>
+      <tr  class="table-info">
+        <th scope="row">8</th>
+        <td> {{ data1.7.0 }}</td> 
+        <td> {{ data1.7.1 }} </td>
+      </tr>
+      <tr  class="table-danger">
+        <th scope="row">9</th>
+        <td> {{ data1.8.0 }}</td> 
+        <td> {{ data1.8.1 }} </td>
+      </tr>
+      <tr  class="table-info">
+        <th scope="row">10</th>
+        <td> {{ data1.9.0 }}</td> 
+        <td> {{ data1.9.1 }} </td>
+      </tr>
+     
+    </tbody>
+  </table>
+</div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+    -->
+  </body>
+</body>
+
+
+</html>
