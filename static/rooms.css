@@ -1,0 +1,28 @@
+body{
+    background-color: aqua;
+}
+#head
+{
+    font-family: 'Stick No Bills', sans-serif;
+    font-size: 1.50rem;
+}
+.imga{
+    background-color: aquamarine;
+}
+.imga img
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    border-radius: 26.5rem;
+
+}
+#w
+{
+    background-color: greenyellow;
+}
+#m
+{
+    background-color: red;
+}
